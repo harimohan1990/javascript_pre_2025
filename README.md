@@ -130,6 +130,7 @@ array (optional) → The whole array.
 thisArg → Optional value to use as this inside the callback.
 
 🔹 Example
+
 const numbers = [1, 2, 3, 4];
 
 const doubled = numbers.map(num => num * 2);
@@ -141,6 +142,7 @@ console.log(numbers); // [1, 2, 3, 4] (original unchanged)
 
 
 ```javascript
+
 Array.prototype.ourMap = function(callback) {
   const result = [];
   for (let i = 0; i < this.length; i++) {
