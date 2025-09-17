@@ -1,6 +1,6 @@
 # javascript_pre_2025
 
-array method polyfiils 
+#array method polyfiils 
 
 forEach
 Array.prototype.ourForEach = function (callBack) {
