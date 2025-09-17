@@ -1,5 +1,7 @@
 # javascript_pre_2025
 
+Array polyfill method
+
 Nice start 👍 Let’s refine your **`forEach` polyfill** a bit.
 
 The native **`forEach`** method in JavaScript works like this:
