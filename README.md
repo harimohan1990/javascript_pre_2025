@@ -104,5 +104,68 @@ names.ourForEach(consoleFunc);
 ✅ This now behaves much like the **native `forEach`**.
 
 
+map in JavaScript
+
+What is map?
+
+The map() method creates a new array populated with the results of calling a provided function on every element.
+
+Unlike forEach, it returns a new array.
+
+Does not mutate the original array (unless the callback itself mutates elements).
+
+🔹 Syntax
+array.map(callback(currentValue, index, array), thisArg)
+
+Parameters:
+
+callback → Function executed on each element.
+
+currentValue → The element being processed.
+
+index (optional) → Index of element.
+
+array (optional) → The whole array.
+
+thisArg → Optional value to use as this inside the callback.
+
+🔹 Example
+const numbers = [1, 2, 3, 4];
+
+const doubled = numbers.map(num => num * 2);
+
+console.log(doubled); // [2, 4, 6, 8]
+console.log(numbers); // [1, 2, 3, 4] (original unchanged)
+
+
+
+
+```javascript
+Array.prototype.ourMap = function(callback) {
+  const result = [];
+  for (let i = 0; i < this.length; i++) {
+    result.push(callback(this[i], i, this));
+  }
+  return result;
+};
+
+// Example
+const numbers = [1, 2, 3, 4];
+const doubled = numbers.ourMap(num => num * 2);
+
+console.log(doubled); // [2, 4, 6, 8]
+```
+
+---
+
+✅ This works like `map`:
+
+* Iterates over each element.
+* Runs the callback with `(element, index, array)`.
+* Collects results in a new array.
+
+
+
+
 
 
